@@ -74,6 +74,7 @@ function setDispose(panel: vscode.WebviewPanel, subscriptions: { dispose(): vsco
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+	console.log('Extension activated');
 
 	const contentProvider = new ConfluenceContentProvider();
 	const contentProviderRegistration = vscode.workspace.registerTextDocumentContentProvider(ConfluenceContentProvider.confluenceURI.scheme, contentProvider);

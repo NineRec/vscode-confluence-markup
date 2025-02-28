@@ -178,5 +178,8 @@
 	},
 	"__metadata": {
 		"publisherDisplayName": "denco"
+	},
+	"dependencies": {
+		"@types/plantuml-encoder": "^1.4.2"
 	}
 }

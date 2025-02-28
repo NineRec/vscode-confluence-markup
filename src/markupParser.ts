@@ -2,6 +2,7 @@
 
 import * as vscode from 'vscode';
 import * as path from 'path';
+import * as encoder from 'plantuml-encoder'
 
 const EXTENTION_ID = 'denco.confluence-markup';
 const EMOTICON_PATH = '/media/emoticons/';
@@ -47,6 +48,14 @@ export function cssUri(cssFile: string) {
 }
 
 export function parseMarkup(sourceUri: vscode.Uri, sourceText: string) {
+	// add support for PlantUML
+	const flowchartRegex = /{flowchart}\s*([\s\S]*?)\s*{flowchart}/g;
+
+	sourceText = sourceText.replace(flowchartRegex, (_, content) => {
+		const encodedContent = encoder.encode(content);
+		return `!https://www.plantuml.com/plantuml/svg/${encodedContent}!`;
+	});
+
 	//TODO: use Tokenizer instead of line loop
 
 	let result = '';

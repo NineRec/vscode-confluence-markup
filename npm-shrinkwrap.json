@@ -1,13 +1,16 @@
 {
 	"name": "confluence-markup",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"lockfileVersion": 3,
 	"requires": true,
 	"packages": {
 		"": {
 			"name": "confluence-markup",
-			"version": "1.0.3",
+			"version": "1.0.4",
 			"license": "MIT",
+			"dependencies": {
+				"@types/plantuml-encoder": "^1.4.2"
+			},
 			"devDependencies": {
 				"@prettier/sync": "^0.5.1",
 				"@types/glob": "8.1.0",
@@ -276,9 +279,16 @@
 			"version": "20.11.25",
 			"resolved": "https://registry.npmjs.org/@types/node/-/node-20.11.25.tgz",
 			"integrity": "sha512-TBHyJxk2b7HceLVGFcpAUjsa5zIdsPWlR6XHfyGzd0SFu+/NFgQgMAl96MSDZgQDvJAvV6BKsFOrt6zIL09JDw==",
-			"dev": true,
 			"dependencies": {
 				"undici-types": "~5.26.4"
+			}
+		},
+		"node_modules/@types/plantuml-encoder": {
+			"version": "1.4.2",
+			"resolved": "https://registry.npmjs.org/@types/plantuml-encoder/-/plantuml-encoder-1.4.2.tgz",
+			"integrity": "sha512-R60SYlcXyTXQebyVwcarGSJUucuwYY5wetBWAOnRt3k52flBXgt4R1KrxaZ4xpk5MpVo9titpVBBhgl/A9JWRQ==",
+			"dependencies": {
+				"@types/node": "*"
 			}
 		},
 		"node_modules/@types/semver": {
@@ -3851,8 +3861,7 @@
 		"node_modules/undici-types": {
 			"version": "5.26.5",
 			"resolved": "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz",
-			"integrity": "sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==",
-			"dev": true
+			"integrity": "sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA=="
 		},
 		"node_modules/uri-js": {
 			"version": "4.4.1",
